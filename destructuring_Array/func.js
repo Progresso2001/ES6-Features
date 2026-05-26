@@ -66,4 +66,4 @@ function buscarUsuarioPorID(usuarios, targetId) {
 }
 
 const usuario = buscarUsuarioPorID(usuarios, 2);
-console.log(usuario.nome); // "João"
+console.log(usuario.nome); 
