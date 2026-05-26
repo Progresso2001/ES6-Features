@@ -74,3 +74,41 @@ console.log(nomeFunc)
 console.log(deptNome)
 console.log(sala)
 
+
+// usando operador rest  
+
+const jogadores = ['Cristiano','Neymar',  'Bale', 'Serigo Ramos', 'Pepe']
+const [ronaldoJogador, , ...restJogadores] = jogadores
+
+console.log("O melhor jogador do mundo: ", ronaldoJogador)
+console.log(restJogadores)
+
+const melhorJogadores = {
+    real_madrid: 'Vinicius Junior',
+    barcelona: 'Lamine Yamal',
+    chelsea: 'Neto',
+    premios: {
+        real_madrid : 12,
+        barcelona: 10, 
+        paris: 3
+    }
+}
+const { real_madrid:jogadorReal, premios:{real_madrid:realPremios}, ...club } = melhorJogadores
+console.log(jogadorReal);
+
+console.log(realPremios);
+console.log(club);
+
+// Default value
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50
+};
+
+// Destructuring
+let {firstName, lastName, country = "US"} = person;
+console.log(country)
+
+
+
