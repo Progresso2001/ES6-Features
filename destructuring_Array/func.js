@@ -49,3 +49,9 @@ for(const { id, nome } of usuarios){
     console.log(`${id}-${nome}`)
 }
 
+// Clássico for com desestruturação no índice
+for (let i = 0; i < usuarios.length; i++) {
+  const { id, nome } = usuarios[i];
+  console.log(`${id} - ${nome}`);
+}
+
