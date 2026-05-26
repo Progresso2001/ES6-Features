@@ -34,3 +34,18 @@ const user = {
 console.log("userId: " + userId(user.id))
 
 pessoa(user)
+
+// usando o laço for...of
+
+const usuarios = [
+    {id:1, nome: 'Ana', idade:23},
+    {id:2, nome: 'Joaquim', idade:33},
+    {id:3, nome: 'Luis', idade:3},
+    {id:4, nome: 'Bento', idade:63}
+]
+// Extrair pelo id e nome
+
+for(const { id, nome } of usuarios){
+    console.log(`${id}-${nome}`)
+}
+
