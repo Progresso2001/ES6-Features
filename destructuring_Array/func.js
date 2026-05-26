@@ -55,3 +55,15 @@ for (let i = 0; i < usuarios.length; i++) {
   console.log(`${id} - ${nome}`);
 }
 
+// Exemplo com id específico (comum em APIs)
+function buscarUsuarioPorID(usuarios, targetId) {
+  for (const { id, nome, email } of usuarios) {
+    if (id === targetId) {
+      return { id, nome, email }; // retorna objeto desestruturado
+    }
+  }
+  return null;
+}
+
+const usuario = buscarUsuarioPorID(usuarios, 2);
+console.log(usuario.nome); // "João"
